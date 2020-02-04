@@ -1,0 +1,25 @@
+body {
+  font: 1.3rem monospace;
+  color: #00ff1e;
+  text-shadow: 0 0 5px #00ff1e;
+  box-shadow: 0 0 10px black;
+  background-color: black;
+  margin: 0;
+  padding: 1rem;
+}
+
+pre {
+  margin: 0;
+}
+
+.terminal input {
+  display: table-cell;
+  border: none;
+  outline: none;
+  font: 1.3rem monospace;
+  color: #00ff1e;
+  text-shadow: 0 0 5px #00ff1e;
+  box-shadow: 0 0 10px black;
+  background-color: black;
+  overflow: hidden;
+}
