@@ -3,14 +3,14 @@ function stdin(input) {
     if (event.keyCode == 13) {
         // create placeholder from duplicated node:
         var parent = input.parentNode; // <pre>
-        var child = parent.cloneNode(true);
+        var clone = parent.cloneNode(true);
+        var placeholder = clone.getElementsByTagName('output')[0]; // <output>
         // write output from input command:
-        var output = child.getElementsByTagName('output')[0]; // <output>
-        output.value = exec(input.value);
-        // clear current node:
+        placeholder.value = exec(input.value);
+        // clear current prompt:
         input.value = "";
-        // insert placeholder before node:
-        parent.parentNode.insertBefore(child, parent);
+        // insert placeholder before prompt:
+        parent.parentNode.insertBefore(clone, parent);
     }
 }
 
