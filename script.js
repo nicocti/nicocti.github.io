@@ -15,5 +15,10 @@ function stdin(input) {
 }
 
 function exec(command) {
-    return "bash: command not found: ".concat(command);
+    switch (command) {
+        case "":
+            return ""
+        default:
+            return "bash: command not found: ".concat(command);
+    }
 }
