@@ -1,7 +1,7 @@
 function stdin(input) {
     // If enter is pressed:
     if (event.keyCode == 13) {
-        var command = input.value
+        var command = input.value;
         // create placeholder from duplicated node:
         var parent = input.parentNode; // <pre>
         var clone = parent.cloneNode(true);
@@ -14,7 +14,7 @@ function stdin(input) {
         parent.parentNode.insertBefore(clone, parent);
         // Handle cleaning:
         if (command == "clear") {
-            var terminal = parent.parentNode
+            var terminal = parent.parentNode;
             while (terminal.childElementCount > 1) {
                 terminal.removeChild(terminal.firstChild);
             }
@@ -25,13 +25,13 @@ function stdin(input) {
 function exec(command) {
     switch (command) {
         case "":
-            return ""
+            return "";
         case "clear":
-            return ""
+            return "";
         case "bash":
-            return ""
+            return "";
         case "/bin/bash":
-            return ""
+            return "";
         default:
             return "bash: command not found: ".concat(command);
     }
