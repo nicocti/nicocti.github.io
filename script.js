@@ -36,3 +36,8 @@ function exec(command) {
             return "bash: command not found: ".concat(command);
     }
 }
+
+function promptFocus(){
+    var inputs = document.getElementsByTagName('input');
+    inputs[inputs.length-1].firstElementChild.focus();
+}
