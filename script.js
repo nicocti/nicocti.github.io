@@ -3,37 +3,46 @@ function stdin(input) {
     if (event.keyCode == 13) {
         var command = input.value;
         // create placeholder from duplicated node:
-        var parent = input.parentNode; // <pre>
+        var parent = input.parentNode.parentNode; // <pre>
         var clone = parent.cloneNode(true);
         var placeholder = clone.getElementsByTagName('output')[0]; // <output>
         // write output from input command:
-        placeholder.value = exec(command);
+        var output = exec(command, placeholder);
         // clear current prompt:
         input.value = "";
         // insert placeholder before prompt:
+        console.log(clone)
         parent.parentNode.insertBefore(clone, parent);
         // Handle cleaning:
         if (command == "clear") {
             var terminal = parent.parentNode;
-            while (terminal.childElementCount > 1) {
+            while (terminal.childElementCount > 2) {
                 terminal.removeChild(terminal.firstChild);
             }
         }
     }
 }
 
-function exec(command) {
+function exec(command, placeholder) {
     switch (command) {
         case "":
-            return "";
         case "clear":
-            return "";
         case "bash":
-            return "";
         case "/bin/bash":
-            return "";
+            placeholder.value = "";
+            return placeholder;
+        case "output0":
+            var out = document.getElementById(command).cloneNode(true);
+            out.style.display = "flex";
+            return out;
         default:
-            return "bash: command not found: ".concat(command);
+            // if command contains /
+            if (command.indexOf("/") !== -1) {
+                placeholder.value = "bash: " + command + ": No such file or directory";
+                return placeholder;
+            }
+            placeholder.value = "bash: command not found: ".concat(command);
+            return placeholder;
     }
 }
 

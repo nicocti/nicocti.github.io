@@ -8,18 +8,70 @@ body {
   padding: 1rem;
 }
 
-pre {
-  margin: 0;
+.prompt {
+  display: flex;
+}
+
+.stdout {
+  display: none;
+  flex-wrap: wrap;
 }
 
 .terminal input {
+  width: 100%;
   display: table-cell;
   border: none;
   outline: none;
   font: 1.3rem monospace;
-  color: #00ff1e;
-  text-shadow: 0 0 5px #00ff1e;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
   box-shadow: 0 0 10px black;
   background-color: black;
   overflow: hidden;
+}
+
+.box1 {
+  flex: 1 1 auto;
+  border: 2px solid #ff0000;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 0 0 5px #ff0000;
+}
+
+.box2 {
+  flex: 2 1 auto;
+  border: 2px solid #00ff00;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 0 0 5px #00ff00;
+}
+
+.white {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+.green {
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.blue {
+  color: #0000ff;
+  text-shadow: 0 0 5px #0000ff;
+}
+
+.yellow {
+  color: #ffff00;
+  text-shadow: 0 0 5px #ffff00;
+}
+
+.red {
+  color: #ff0000;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+.purple {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
 }

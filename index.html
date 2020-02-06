@@ -8,9 +8,22 @@
 
     <body>
         <div class="terminal">
-            <pre class="stdin">
-guest@nicocti.github.io:~$ <input type="text" autofocus onkeypress="stdin(this)">
-<output></output></pre>
+            <div class="stdin">
+                <div class="prompt">
+                    <span class="green">guest</span>
+                    <span class="green">@</span>
+                    <span class="green">nicocti.github.com</span>
+                    <span class="green">:</span>
+                    <span class="green">~</span>
+                    <span class="green">$</span>
+                    <input type="text" autofocus onkeypress="stdin(this)">
+                </div>
+                <output></output>
+            </div>
+            <div class="stdout" id="output0">
+                <div class="box1">test1</div>
+                <div class="box2">test2</div>
+            </div>
         </div>
     </body>
     <footer>
