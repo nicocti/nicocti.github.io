@@ -37,7 +37,7 @@ function exec(command) {
     }
 }
 
-function inpfocus(){
+function inputfocus(){
     var last_inp = document.getElementsByClassName('stdin')[document.getElementsByClassName('stdin').length-1];
     last_inp.firstElementChild.focus();
 }
