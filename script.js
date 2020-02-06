@@ -39,5 +39,5 @@ function exec(command) {
 
 function promptFocus(){
     var inputs = document.getElementsByTagName('input');
-    inputs[inputs.length-1].firstElementChild.focus();
+    inputs[inputs.length-1].focus();
 }
