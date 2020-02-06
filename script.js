@@ -37,7 +37,7 @@ function exec(command) {
     }
 }
 
-function inputfocus(){
-    var last_inp = document.getElementsByClassName('stdin')[document.getElementsByClassName('stdin').length-1];
-    last_inp.firstElementChild.focus();
+function promptFocus(){
+    var inputs = document.getElementsByTagName('input');
+    inputs[inputs.length-1].firstElementChild.focus();
 }
