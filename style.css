@@ -1,7 +1,7 @@
 body {
   font: 1.3rem monospace;
-  color: #00ff1e;
-  text-shadow: 0 0 5px #00ff1e;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
   box-shadow: 0 0 10px black;
   background-color: black;
   margin: 0;
@@ -10,6 +10,10 @@ body {
 
 .prompt {
   display: flex;
+}
+
+.prompt input {
+  margin-left: 10px;
 }
 
 .stdout {

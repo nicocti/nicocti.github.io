@@ -1,10 +1,10 @@
 function stdin(input) {
     // If enter is pressed:
     if (event.keyCode == 13) {
-        var command = input.value;
+        var command = input.value.trim();
 
-        // create placeholder from duplicated node:
-        var parent = input.parentNode.parentNode; // <pre>
+        // create placeholder from duplicated "stdin" node:
+        var parent = input.parentNode.parentNode;
         var clone = parent.cloneNode(true);
 
         // write output from input command:
